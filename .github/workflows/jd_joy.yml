@@ -30,7 +30,6 @@ jobs:
           npm install
       - name: '运行 【宠汪汪】'
         run: |
-          cd ~/scripts
           node jd_joy.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}

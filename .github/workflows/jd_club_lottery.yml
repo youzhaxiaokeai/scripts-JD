@@ -30,7 +30,6 @@ jobs:
           npm install
       - name: '运行 【摇京豆脚本】'
         run: |
-          cd ~/scripts
           node jd_club_lottery.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}

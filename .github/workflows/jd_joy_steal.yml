@@ -30,7 +30,6 @@ jobs:
           npm install
       - name: '运行 【宠汪汪偷好友狗粮与积分】'
         run: |
-          cd ~/scripts
           node jd_joy_steal.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
