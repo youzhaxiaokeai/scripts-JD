@@ -5,8 +5,8 @@ name: jd_xtg
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 16 * * *' #北京时间0点运行，action会有延迟
+  # schedule:
+  #   - cron: '0 16 * * *' #北京时间0点运行，action会有延迟
   watch:
     types: started
   repository_dispatch:
