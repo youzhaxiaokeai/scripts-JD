@@ -32,7 +32,7 @@
     pt_key=eeeeeeeee;pt_pin=ffffffff;
     ```
   - 京东cookie获取看这里
-    - [浏览器获取京东cookie教程](https://github.com/lxk0301/scripts/blob/master/backUp/GetJdCookie.md) 或者 [插件获取京东cookie教程](https://github.com/lxk0301/scripts/blob/master/backUp/GetJdCookie2.md)
+    - [浏览器获取京东cookie教程](/backUp/GetJdCookie.md) 或者 [插件获取京东cookie教程](/backUp/GetJdCookie2.md)
     - IOS代理软件(Surge, Quantumult X, Loon)等用户有使用过BoxJs的,可在BoxJs里面提取京东cookie(打开BoxJs -> 底部中间的 `应用` -> NobyDa脚本订阅 -> 京东(多合一签到) -> 点击会话右上方的三个点点 -> 修改会话 -> 全选复制即可)，再不会看此[图文教程](icon/jd8.png)
     
     
@@ -75,7 +75,7 @@
 
   - 方案A - 强制远程分支覆盖自己的分支(**新手推荐使用**)
   
-      1. 参考tg@wukongdada这篇教程 [保持自己github的forks自动和上游仓库同步的教程](https://github.com/lxk0301/scripts/blob/master/backUp/gitSync.md) ， 安装[pull插件](https://github.com/apps/pull) 并确认此项目已在pull插件的作用下（参考@twukongdada这篇教程文中1-d）
+      1. 参考tg@wukongdada这篇教程 [保持自己github的forks自动和上游仓库同步的教程](/backUp/gitSync.md) ， 安装[pull插件](https://github.com/apps/pull) 并确认此项目已在pull插件的作用下（参考@twukongdada这篇教程文中1-d）
       
       2. 确保.github/pull.yml文件正常存在，yml内上游作者填写正确(此项目已填好，无需更改)。
       
@@ -96,7 +96,7 @@
     > 上游变动后pull插件会自动发起pr，但如果有冲突需要自行**手动**确认。
     > 如果上游更新涉及workflow里的文件内容改动，需要自行**手动**确认。
     
-    1. 参考tg@wukongdada这篇教程 [保持自己github的forks自动和上游仓库同步的教程](https://github.com/lxk0301/scripts/blob/master/backUp/gitSync.md) ， 安装[pull插件](https://github.com/apps/pull) 并确认此项目已在pull插件的作用下（参考@twukongdada这篇教程文中1-d）
+    1. 参考tg@wukongdada这篇教程 [保持自己github的forks自动和上游仓库同步的教程](/backUp/gitSync.md) ， 安装[pull插件](https://github.com/apps/pull) 并确认此项目已在pull插件的作用下（参考@twukongdada这篇教程文中1-d）
     2. 确保.github/pull.yml文件正常存在，yml内上游作者填写正确(此项目已填好，无需更改)。
     3. 将pull.yml里面的`mergeMethod: hardreset`修改为`mergeMethod: merge`保存。
     4. ENJOY!上游更改三小时左右就会自动发起同步。
@@ -121,7 +121,7 @@
 
 | Name                    |   归属   | 属性   | 说明                                                         |
 | :---------------------: | :----------: | --------- | ------------------------------------------------------------ |
-| `JD_COOKIE`             |   京东   | 必须   | 京东cookie,多个账号的cookie使用`&`隔开或者换行。具体获取参考[浏览器获取京东cookie教程](https://github.com/lxk0301/scripts/blob/master/backUp/GetJdCookie.md) 或者 [插件获取京东cookie教程](https://github.com/lxk0301/scripts/blob/master/backUp/GetJdCookie2.md) |
+| `JD_COOKIE`             |   京东   | 必须   | 京东cookie,多个账号的cookie使用`&`隔开或者换行。具体获取参考[浏览器获取京东cookie教程](/backUp/GetJdCookie.md) 或者 [插件获取京东cookie教程](/backUp/GetJdCookie2.md) |
 | `JD_BEAN_STOP`          |   京东   | 非必须   | 自定义延迟签到,单位毫秒. 默认分批并发无延迟. 延迟作用于每个签到接口, 如填入延迟则切换顺序签到(耗时较长),如需填写建议输入数字`1` |
 | `JD_DEBUG`              |   脚本打印log   | 非必须   | 运行脚本时，是否显示log,默认显示。改成false表示不显示，注重隐私的人可以在设置secret -> `Name:JD_DEBUG,Value:false` |
 | `PUSH_KEY`              |   微信推送   | 非必须 | cookie失效推送[server酱的微信通知](http://sc.ftqq.com/3.version) |
@@ -146,10 +146,10 @@
 | `SUPERMARKET_LOTTERY`   |  京小超抽奖  | 非必须 | 每天运行脚本是否使用金币去抽奖,`true`表示抽奖,`false`表示不抽奖 |
 | `FRUIT_BEAN_CARD`       |  农场使用水滴换豆卡  | 非必须 | 农场使用水滴换豆卡(如果出现限时活动时100g水换20豆,此时比浇水划算,推荐换豆),`true`表示换豆(不浇水),`false`表示不换豆(继续浇水),脚本默认是浇水 |
 | `UN_SUBSCRIBES`         |  jd_unsubscribe.js  | 非必须 | 共四个参数,换行隔开. 四个参数分别表示`取关商品数量`,`取关店铺数量`,`遇到此商品不再进行取关`, `遇到此店铺不再进行取关`，[具体使用往下看](#取关店铺secret的说明)|
-| `FruitShareCodes`       |  东东农场互助码  | 非必须 | 填写规则请看 [jdFruitShareCodes.js](https://github.com/lxk0301/scripts/blob/master/jdFruitShareCodes.js) 或见下方[互助码的填写规则](#互助码的填写规则) |
-| `PETSHARECODES`         |  东东萌宠互助码  | 非必须 | 填写规则请看 [jdPetShareCodes.js](https://github.com/lxk0301/scripts/blob/master/jdPetShareCodes.js) 或见下方[互助码的填写规则](#互助码的填写规则) |
-| `PLANT_BEAN_SHARECODES` |  种豆得豆互助码  | 非必须 | 填写规则请看 [jdPlantBeanShareCodes.js](https://github.com/lxk0301/scripts/blob/master/jdPlantBeanShareCodes.js) 或见下方[互助码的填写规则](#互助码的填写规则) |
-| `SUPERMARKET_SHARECODES`|  京小超商圈互助码  | 非必须 | 填写规则请看 [jdSuperMarketShareCodes.js](https://github.com/lxk0301/scripts/blob/master/jdSuperMarketShareCodes.js) 或见下方[互助码的填写规则](#互助码的填写规则) |
+| `FruitShareCodes`       |  东东农场互助码  | 非必须 | 填写规则请看 [jdFruitShareCodes.js](/jdFruitShareCodes.js) 或见下方[互助码的填写规则](#互助码的填写规则) |
+| `PETSHARECODES`         |  东东萌宠互助码  | 非必须 | 填写规则请看 [jdPetShareCodes.js](/jdPetShareCodes.js) 或见下方[互助码的填写规则](#互助码的填写规则) |
+| `PLANT_BEAN_SHARECODES` |  种豆得豆互助码  | 非必须 | 填写规则请看 [jdPlantBeanShareCodes.js](/jdPlantBeanShareCodes.js) 或见下方[互助码的填写规则](#互助码的填写规则) |
+| `SUPERMARKET_SHARECODES`|  京小超商圈互助码  | 非必须 | 填写规则请看 [jdSuperMarketShareCodes.js](/jdSuperMarketShareCodes.js) 或见下方[互助码的填写规则](#互助码的填写规则) |
 
 
 
