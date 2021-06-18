@@ -11,6 +11,10 @@ on:
     types: started
   repository_dispatch:
     types: shop
+  push:
+    branches:
+      - master
+      
 jobs:
   build:
 

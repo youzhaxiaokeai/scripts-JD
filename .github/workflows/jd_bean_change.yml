@@ -11,6 +11,10 @@ on:
     types: started
   repository_dispatch:
     types: bean_change
+  push:
+    branches:
+      - master
+
 jobs:
   build:
 
